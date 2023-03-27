@@ -1,0 +1,199 @@
+@import "variables.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+  font-weight: 400;
+	font-size: 15px;
+	line-height: 24px;
+	text-align: center;
+	background-color: $color-light-xl;
+}
+
+h2, h3, h4 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+	font-size: 44px;
+	line-height: 57.2px;
+}
+
+h3, h4 {
+	font-size: 35px;
+	line-height: 45.5px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	// padding: 0 15px;
+}
+
+.button__primary {
+	@include button_primary($color-primary);
+}
+
+.button__secondary {
+	@include button_secondary($border-primary);
+}
+
+// HEADER
+
+.header {
+	color: $color-light-xl;
+	background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+// NAVBAR
+.header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav .logo__wrapper {
+	.title {
+		font-size: 32px;
+		// line-height: 110;
+	}
+}
+
+nav .list__menu {
+	@include horizontal-list;
+}
+
+.menu__item a {
+	color: $color-light-xl;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.start__screen__wrapper .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.start__screen_content h2 {
+	font-size: 44px;
+}
+.start__screen_content p {
+	margin: 42px auto;
+}
+
+// ABOUT SECTION
+.about__section .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 80px 40px 100px;
+	img {
+		order: -1;
+		margin: auto;
+	}
+}
+
+.about__content {
+	width: 430px; //?
+	min-width: 50%;
+	text-align: left;
+	& p:last-child {
+		margin: 25px auto;
+	}
+
+}
+
+// SLIDER SECTION
+.slider__section {
+	padding: 80px 40px 100px;
+	background-color: $color-light-l;
+}
+
+.slider__section .container {
+	height: 697px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.slider__container {
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider__card__content {
+	padding-bottom: 30px;
+	height: 435px;
+	width: 270px;
+
+	& p {
+		margin: 30px auto;
+	}
+}
+
+.help__section {
+	padding: 80px 40px 100px;
+	h3 {
+		margin-bottom: 60px;
+	}
+}
+
+.help__list {
+	@include horizontal-list;
+	display: flex;
+	flex-wrap: wrap;
+	.help__list__item {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 15%;
+		margin-bottom: 55px;
+		// margin-right: 120px;
+	}
+}
+
+// DONATION SECTION
+.donation__section {
+	background-color: $color-light-l;
+	.container {
+		display: flex;
+		align-items: center;
+		padding: 80px 40px 100px;
+		img {
+			order: -1;
+			// margin: auto;
+		}
+	}
+}
+
+.donation__content {
+	width: 430px;
+	min-width: 50%;
+	text-align: left;
+}
+
+// FOOTER
+.footer {
+	background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+	color: white;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
