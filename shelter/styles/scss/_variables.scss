@@ -4,6 +4,7 @@ $color-primary-light: #FDDCC4;
 $color-dark-3xl: #292929;
 $color-light-xl: #FFFFFF;
 $color-dark-s: #CDCDCD;
+$color-dark-l: #545454;
 $color-light-l: #F6F6F6;
 
 
@@ -51,12 +52,12 @@ $border-primary: 2px solid #F1CDB3;
 	padding: 15px 45px;
 	border: $border;
 	border-radius: 100px;
+	color: $color-dark-3xl;
 	background: $bg_color;
 	width: max-content; //?
 	transition: all 0.5s;
 	&:hover {
 		cursor: pointer;
-		// transition: background-color 0.2s ease-in-out;
 	}
 }
 
@@ -76,8 +77,9 @@ $border-primary: 2px solid #F1CDB3;
 	}
 }
 
-@mixin button_float($bg_color: false, $border_primary) {
-	@include button($bg_color, $border_primary);
+@mixin button_float($border: $border-primary) {
+	@include button(transparent, $border);
+		padding: 23px 19px;
 	&:hover {
 		background-color: $color-primary-light;
 	}

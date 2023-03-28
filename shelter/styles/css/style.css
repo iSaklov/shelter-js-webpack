@@ -16,7 +16,11 @@ body {
   background-color: #FFFFFF;
 }
 
-h2, h3, h4 {
+main {
+  color: #545454;
+}
+
+h1, h2, h3, h4, h5 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -26,8 +30,20 @@ h2 {
 }
 
 h3, h4 {
+  font-family: "Georgia";
   font-size: 35px;
   line-height: 45.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  font-weight: 400;
 }
 
 .container {
@@ -45,6 +61,7 @@ h3, h4 {
   padding: 15px 45px;
   border: none;
   border-radius: 100px;
+  color: #292929;
   background: #F1CDB3;
   width: max-content;
   transition: all 0.5s;
@@ -66,6 +83,7 @@ h3, h4 {
   padding: 15px 45px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
+  color: #292929;
   background: transparent;
   width: max-content;
   transition: all 0.5s;
@@ -76,6 +94,29 @@ h3, h4 {
 .button__secondary:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
+}
+
+.button__float {
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 22.1px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 45px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  color: #292929;
+  background: transparent;
+  width: max-content;
+  transition: all 0.5s;
+  padding: 23px 19px;
+}
+.button__float:hover {
+  cursor: pointer;
+}
+.button__float:hover {
+  background-color: #FDDCC4;
 }
 
 .header {
@@ -91,6 +132,16 @@ h3, h4 {
 
 nav .logo__wrapper .title {
   font-size: 32px;
+  line-height: 35.2px;
+  font-weight: 400;
+  letter-spacing: 6%;
+  color: #F1CDB3;
+}
+nav .logo__wrapper .subtitle {
+  font-size: 13px;
+  line-height: 14.95px;
+  letter-spacing: 10%;
+  color: white;
 }
 
 nav .list__menu {
@@ -108,9 +159,13 @@ nav .list__menu li {
 }
 
 .menu__item a {
-  color: #FFFFFF;
+  color: #CDCDCD;
   text-decoration: none;
   font-size: 15px;
+  line-height: 24px;
+}
+.menu__item a:hover {
+  border-bottom: #F1CDB3 3px solid;
 }
 
 .start__screen__wrapper .container {
@@ -119,12 +174,17 @@ nav .list__menu li {
   align-items: center;
 }
 
+.start__screen_content {
+  text-align: left;
+}
 .start__screen_content h2 {
   font-size: 44px;
+  line-height: 57.2px;
+  color: white;
 }
-
 .start__screen_content p {
   margin: 42px auto;
+  color: #CDCDCD;
 }
 
 .about__section .container {
@@ -141,10 +201,12 @@ nav .list__menu li {
 .about__content {
   width: 430px;
   min-width: 50%;
+  padding-right: 175px;
   text-align: left;
+  color: #545454;
 }
 .about__content p:last-child {
-  margin: 25px auto;
+  margin: 25px 0;
 }
 
 .slider__section {
@@ -177,6 +239,10 @@ nav .list__menu li {
   margin: 30px auto;
 }
 
+.slider__section .btn__next {
+  transform: rotate(180deg);
+}
+
 .help__section {
   padding: 80px 40px 100px;
 }
@@ -200,12 +266,19 @@ nav .list__menu li {
   margin-left: 35px;
 }
 .help__list .help__list__item {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 6%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 15%;
+  margin-right: 100px;
   margin-bottom: 55px;
+}
+.help__list .help__list__item span {
+  padding-top: 30px;
 }
 
 .donation__section {
@@ -224,14 +297,59 @@ nav .list__menu li {
   width: 430px;
   min-width: 50%;
   text-align: left;
+  padding: 0 100px;
+}
+.donation__content h4 {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 6%;
+  font-weight: 400;
+  background: #F1CDB3;
+  border-radius: 9px;
+  padding: 10px 20px;
+  width: max-content;
+}
+.donation__content p {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  font-style: italic;
+  /* color-dark-m */
+  color: #B2B2B2;
+}
+.donation__content img {
+  display: inline;
+  vertical-align: middle;
+  padding-right: 10px;
 }
 
 .footer {
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-  color: white;
+  color: #F1CDB3;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 40px 40px 0;
 }
 .footer .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  text-align: left;
+}
+.footer .container div:last-of-type {
+  margin: 0 160px;
+}
+.footer h4 {
+  color: white;
+  font-weight: 400;
+  letter-spacing: 6%;
+}
+.footer img {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.footer .footer-puppy {
+  margin-top: 50px;
 }
