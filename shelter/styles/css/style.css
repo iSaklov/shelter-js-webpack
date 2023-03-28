@@ -239,7 +239,7 @@ nav .list__menu li {
   margin: 30px auto;
 }
 
-.slider__section .btn__next {
+.btn__next {
   transform: rotate(180deg);
 }
 
@@ -352,4 +352,10 @@ nav .list__menu li {
 }
 .footer .footer-puppy {
   margin-top: 50px;
+}
+
+.slider__pets > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

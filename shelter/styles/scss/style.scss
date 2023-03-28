@@ -187,7 +187,7 @@ nav .list__menu {
 	}
 }
 
-.slider__section .btn__next {
+.btn__next {
 	transform: rotate(180deg);
 }
 
@@ -300,4 +300,11 @@ nav .list__menu {
 	.footer-puppy {
 		margin-top: 50px;
 	}
+}
+
+// PETS PAGE
+.slider__pets > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
