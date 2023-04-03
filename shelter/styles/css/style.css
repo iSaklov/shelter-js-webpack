@@ -287,6 +287,7 @@ h5 {
 
 .slider__wrapper {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 60px;
@@ -309,15 +310,19 @@ h5 {
   background-color: #FAFAFA;
   padding-bottom: 30px;
   border-radius: 9px;
+  margin: 0px 45px;
+}
+.card__content:first-of-type {
+  margin-left: 0px;
+}
+.card__content:last-of-type {
+  margin-right: 0px;
 }
 .card__content img {
   border-radius: 9px 9px 0px 0px;
 }
 .card__content h4 {
   margin: 30px auto;
-}
-.card__content:nth-of-type(2) {
-  margin: 0 90px;
 }
 @media (hover: hover) {
   .card__content:hover {
@@ -421,4 +426,64 @@ h5 {
 }
 .footer h4 {
   color: #F1CDB3;
+}
+
+.pets__page {
+  background-color: #FFFFFF;
+  padding: 30px 0px;
+}
+.pets__page nav {
+  padding-top: 0px;
+}
+.pets__page nav .logo__title,
+.pets__page nav .menu__item a {
+  color: #545454;
+}
+.pets__page nav .logo__subtitle,
+.pets__page nav .active a {
+  color: #292929;
+}
+
+.pets__section {
+  background-color: #F6F6F6;
+  padding: 80px 0px 100px;
+}
+.pets__section h3 {
+  margin-bottom: 60px;
+}
+.pets__section .slider__wrapper {
+  gap: 30px 40px;
+  margin: 45px 0px;
+}
+.pets__section .card__content {
+  margin: 0;
+}
+.pets__section .slider__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  margin-top: 60px;
+}
+.pets__section .slider__pagination .inactive {
+  color: #CDCDCD;
+  border-color: #CDCDCD;
+}
+.pets__section .slider__pagination .inactive h4 {
+  color: #CDCDCD;
+}
+@media (hover: hover) {
+  .pets__section .slider__pagination .inactive {
+    cursor: default;
+    background-color: inherit;
+  }
+}
+.pets__section .slider__pagination .active {
+  background-color: #F1CDB3;
+  border-color: #F1CDB3;
+}
+@media (hover: hover) {
+  .pets__section .slider__pagination .active:hover {
+    cursor: default;
+  }
 }
