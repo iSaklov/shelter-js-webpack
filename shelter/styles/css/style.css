@@ -1,13 +1,14 @@
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
   text-align: center;
   color: #4C4C4C;
 }
@@ -18,7 +19,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
+  margin: 0rem;
 }
 
 h2, h3, h4, h5 {
@@ -28,25 +29,25 @@ h2, h3, h4, h5 {
 }
 
 h2 {
-  font-size: 44px;
-  line-height: 57px;
+  font-size: 4.4rem;
+  line-height: 5.7rem;
 }
 
 h3 {
-  font-size: 35px;
-  line-height: 45px;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
   letter-spacing: 0.06em;
 }
 
 h4 {
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 2rem;
+  line-height: 2.3rem;
   letter-spacing: 0.06em;
 }
 
 h5 {
-  font-size: 15px;
-  line-height: 17px;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
   letter-spacing: 0.06em;
 }
 
@@ -57,8 +58,8 @@ h5 {
 .paragraph__S {
   font-style: italic;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   color: #B2B2B2;
 }
 
@@ -156,16 +157,16 @@ h5 {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 120rem;
+  margin: 0rem auto;
 }
 
 .section__content__margin {
-  margin: 80px auto 100px;
+  margin: 8rem auto 10rem;
 }
 
 .header nav {
-  padding-top: 30px;
+  padding-top: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,18 +176,18 @@ h5 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  line-height: 35px;
+  font-size: 3.2rem;
+  line-height: 3.5rem;
   letter-spacing: 0.06em;
   color: #F1CDB3;
-  margin: 0 auto 10px;
+  margin: 0rem auto 1rem;
 }
 .logo__wrapper .logo__subtitle {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
@@ -198,12 +199,12 @@ h5 {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  padding: 16px 0 20px;
+  padding: 1.6rem 0rem 2rem;
 }
 .list__menu li {
   margin-top: 0px;
   margin-left: 0px;
-  margin-right: 35px;
+  margin-right: 3.5rem;
   margin-bottom: 0px;
 }
 .list__menu li:last-child {
@@ -213,9 +214,9 @@ h5 {
 .menu__item a {
   color: #CDCDCD;
   text-decoration: none;
-  font-size: 15px;
-  line-height: 24px;
-  padding-bottom: 3px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  padding-bottom: 0.3rem;
   transition: all 0.2s ease-in-out;
 }
 @media (hover: hover) {
@@ -226,35 +227,35 @@ h5 {
 
 .list__menu .active a {
   color: #FAFAFA;
-  border-bottom: 3px solid #F1CDB3;
+  border-bottom: 0.3rem solid #F1CDB3;
 }
 
 .start__screen__wrapper {
   color: #FFFFFF;
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-  margin-top: -90px;
+  margin-top: -9rem;
 }
 
 .start__screen__wrapper .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 180px;
+  padding-top: 18rem;
 }
 
 .start__screen_content {
   text-align: left;
-  flex-basis: 460px;
-  padding-top: 163px;
-  padding-right: 42px;
-  padding-bottom: 243px;
+  flex-basis: 46rem;
+  padding-top: 16.3rem;
+  padding-right: 4.2rem;
+  padding-bottom: 24.3rem;
 }
 .start__screen_content h2 {
   color: #FFFFFF;
 }
 .start__screen_content p {
   color: #CDCDCD;
-  margin: 42px auto;
+  margin: 4.2rem auto;
 }
 
 .about__section .container {
@@ -264,25 +265,25 @@ h5 {
 }
 .about__section .container img {
   order: -1;
-  padding-right: 120px;
+  padding-right: 12rem;
 }
 
 .about__content {
   text-align: left;
-  flex-basis: 430px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  flex-basis: 43rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
 }
 .about__content p:first-of-type {
-  margin: 25px 0;
+  margin: 2.5rem 0rem;
 }
 
 .our__friends__section {
   background-color: #F6F6F6;
-  padding: 80px 0px 100px;
+  padding: 8rem 0rem 10rem;
 }
 .our__friends__section .button__primary {
-  margin: 0 auto;
+  margin: 0rem auto;
 }
 
 .slider__wrapper {
@@ -290,44 +291,44 @@ h5 {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 .slider__wrapper .btn__prev {
-  margin-right: 53px;
+  margin-right: 5.3rem;
 }
 .slider__wrapper .btn__next {
-  margin-left: 53px;
+  margin-left: 5.3rem;
   transform: rotate(180deg);
 }
 
 .card__content {
-  flex-basis: 270px;
+  flex-basis: 27rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #FAFAFA;
-  padding-bottom: 30px;
-  border-radius: 9px;
-  margin: 0px 45px;
+  padding-bottom: 3rem;
+  border-radius: 0.9rem;
+  margin: 0rem 4.5rem;
 }
 .card__content:first-of-type {
-  margin-left: 0px;
+  margin-left: 0rem;
 }
 .card__content:last-of-type {
-  margin-right: 0px;
+  margin-right: 0rem;
 }
 .card__content img {
-  border-radius: 9px 9px 0px 0px;
+  border-radius: 0.9rem 0.9rem 0rem 0rem;
 }
 .card__content h4 {
-  margin: 30px auto;
+  margin: 3rem auto;
 }
 @media (hover: hover) {
   .card__content:hover {
     background-color: #FFFFFF;
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    box-shadow: 0rem 0.2rem 3.5rem 1.4rem rgba(13, 13, 13, 0.04);
   }
   .card__content:hover .button__secondary {
     background-color: #FDDCC4;
@@ -336,7 +337,7 @@ h5 {
 }
 
 .help__section h3 {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 .help__section .help__list {
   display: flex;
@@ -347,19 +348,19 @@ h5 {
   list-style: none;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 55px 120px;
+  gap: 5.5rem 12rem;
 }
 .help__section .help__list li {
   margin-top: 0px;
   margin-left: 0px;
-  margin-right: 0px;
+  margin-right: 0rem;
   margin-bottom: 0px;
 }
 .help__section .help__list li:last-child {
   margin-right: 0px;
 }
 .help__section .help__list__item h4 {
-  margin-top: 23px;
+  margin-top: 2.3rem;
 }
 
 .donation__section {
@@ -367,25 +368,25 @@ h5 {
   justify-content: center;
   align-items: center;
   background-color: #F6F6F6;
-  padding: 80px 0px 100px;
+  padding: 8rem 0rem 10rem;
 }
 .donation__section img {
   order: -1;
-  margin-right: 30px;
+  margin-right: 3rem;
 }
 
 .donation__content {
   display: flex;
   flex-direction: column;
-  gap: 20px 0px;
-  width: 380px;
+  gap: 2rem 0rem;
+  width: 38rem;
   text-align: left;
 }
 .donation__content h4 {
   background-color: #F1CDB3;
   width: max-content;
-  border-radius: 9px;
-  padding: 10px 15px;
+  border-radius: 0.9rem;
+  padding: 1rem 1.5rem;
 }
 @media (hover: hover) {
   .donation__content h4:hover {
@@ -394,12 +395,12 @@ h5 {
 }
 .donation__content img {
   vertical-align: text-top;
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .footer {
   background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-  padding-top: 40px;
+  padding-top: 4rem;
 }
 .footer .container {
   display: flex;
@@ -409,17 +410,17 @@ h5 {
 .footer .container div {
   display: flex;
   flex-flow: column wrap;
-  row-gap: 40px;
-  padding-top: 16px;
+  row-gap: 4rem;
+  padding-top: 1.6rem;
 }
 .footer .container div:last-of-type {
-  row-gap: 33px;
-  margin-left: -6px;
+  row-gap: 3.3rem;
+  margin-left: -0.6rem;
 }
 .footer a {
   display: flex;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 2rem;
 }
 .footer h3 {
   color: #FFFFFF;
@@ -430,10 +431,10 @@ h5 {
 
 .pets__page {
   background-color: #FFFFFF;
-  padding: 30px 0px;
+  padding: 3rem 0rem;
 }
 .pets__page nav {
-  padding-top: 0px;
+  padding-top: 0rem;
 }
 .pets__page nav .logo__title,
 .pets__page nav .menu__item a {
@@ -446,24 +447,24 @@ h5 {
 
 .pets__section {
   background-color: #F6F6F6;
-  padding: 80px 0px 100px;
+  padding: 8rem 0rem 10rem;
 }
 .pets__section h3 {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 .pets__section .slider__wrapper {
-  gap: 30px 40px;
-  margin: 45px 0px;
+  gap: 3rem 4rem;
+  margin: 4.5rem 0rem;
 }
 .pets__section .card__content {
-  margin: 0;
+  margin: 0rem;
 }
 .pets__section .slider__pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 20px;
-  margin-top: 60px;
+  column-gap: 2rem;
+  margin-top: 6rem;
 }
 .pets__section .slider__pagination .inactive {
   color: #CDCDCD;
