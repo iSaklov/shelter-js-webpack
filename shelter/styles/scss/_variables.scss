@@ -16,6 +16,25 @@ $color-dark-l: #545454;
 $color-dark-m: #B2B2B2;
 $color-dark-s: #CDCDCD;
 
+// MEDIA QUERIES
+$breakpoints: (
+	"mobile": 480px,
+	"tablet": 768px,
+	"desktop": 1024px
+);
+
+@mixin mobile-only {
+	@media screen and (max-width: map-get($breakpoints, "mobile")) {
+		@content;
+	}
+}
+
+@mixin tablet-only {
+	@media screen and (max-width: map-get($breakpoints, "tablet")) {
+		@content;
+	}
+}
+
 // OTHERS
 $border-primary: 2px solid $color-primary;
 $background-primary: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
