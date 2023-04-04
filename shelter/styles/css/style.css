@@ -561,22 +561,40 @@ h5 {
   background-color: #F6F6F6;
   padding: 8rem 0rem 10rem;
 }
-.pets__section h3 {
-  margin-bottom: 6rem;
+@media screen and (max-width: 768px) {
+  .pets__section {
+    padding: 6rem 0rem 7.6rem;
+  }
+  .pets__section h3 {
+    padding-top: 2rem;
+  }
 }
 .pets__section .slider__wrapper {
   gap: 3rem 4rem;
-  margin: 4.5rem 0rem;
+}
+@media screen and (max-width: 768px) {
+  .pets__section .slider__wrapper {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+  }
 }
 .pets__section .card__content {
   margin: 0rem;
+}
+@media screen and (max-width: 768px) {
+  .pets__section .card__content:first-of-type {
+    margin-right: 0rem;
+  }
+  .pets__section .card__content:nth-of-type(7) {
+    display: none;
+  }
 }
 .pets__section .slider__pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
-  margin-top: 6rem;
 }
 .pets__section .slider__pagination .inactive {
   color: #CDCDCD;
