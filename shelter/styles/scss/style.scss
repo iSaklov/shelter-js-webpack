@@ -35,12 +35,23 @@ h2, h3, h4, h5 {
 h2 {
 	font-size: 4.4rem;
 	line-height: 5.7rem;
+
+	@include media-mobile {
+		font-size: 2.5rem;
+		line-height: 3.2rem;
+		letter-spacing: .06em;
+	}
 }
 
 h3 {
 	font-size: 3.5rem;
 	line-height: 4.5rem;
 	letter-spacing: .06em;
+
+	@include media-mobile {
+		font-size: 2.5rem;
+		line-height: 3.2rem;
+	}
 }
 
 h4 {
@@ -53,6 +64,11 @@ h5 {
 	font-size: 1.5rem;
 	line-height: 1.7rem;
 	letter-spacing: .06em;
+
+	@include media-mobile {
+		line-height: 2.4rem;
+		letter-spacing: 0em;
+	}
 }
 
 .h5-modal-window {
@@ -83,26 +99,64 @@ h5 {
 	max-width: 120rem;
 	margin: 0rem auto;
 
-	@include tablet-only {
+	@include media-tablet {
 		padding: 0rem 3rem;
-		// margin: 0rem 3rem;
 	}
 
-	@include mobile-only {
+	@include media-mobile {
 		padding: 0rem 1rem;
 	}
 }
 
 .section__content__margin {
 	margin: 8rem auto 10rem;
+
+	@include media-mobile {
+		margin: 0rem auto;
+		padding: 4.2rem 1rem;
+	}
 }
 
 // HEADER NAVBAR
 .header nav {
-	padding-top: 3rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 3rem 2rem 0rem;
+
+	@include media-tablet {
+		padding-top: 3rem;
+	}
+}
+
+// BUREGER MENU
+.sidevan {
+	position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -1000vw;
+	transition: left 0.5s ease;
+}
+
+.sidenav .active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: $color-primary;
+  margin: .8rem 0;
 }
 
 .logo__wrapper {
@@ -137,7 +191,7 @@ h5 {
 	text-decoration: none;
 	font-size: 1.5rem;
 	line-height: 2.4rem;
-	padding-bottom: .3rem; //?
+	padding-bottom: .3rem; //? FIGMA pixel perfect
 	transition: all .2s ease-in-out;
 	@media (hover: hover) {
 		&:hover {
@@ -165,15 +219,26 @@ h5 {
 	align-items: center;
 	padding-top: 18rem;
 
-	@include tablet-only {
+	@include media-tablet {
 		flex-direction: column;
 		padding-top: 15rem;
 
 		img {
-			width: 569px;
-			height: 593px;
+			width: 56.9rem;
+			height: 59.3rem;
 			align-self: flex-end;
 			margin-top: 10rem;
+		}
+	}
+
+	@include media-mobile {
+		flex-direction: column;
+		padding-top: 15rem;
+
+		img {
+			width: 26rem;
+			align-self: flex-end;
+			margin-top: 10.5rem;
 		}
 	}
 }
@@ -192,10 +257,19 @@ h5 {
 		margin: 4.2rem auto;
 	}
 
-	@include tablet-only {
+	@include media-tablet {
 		flex-basis: auto;
 		margin: 0rem 6.9rem 0rem 7rem;
 		padding: 0rem 5.4rem 0rem 5.5rem;
+		.button__primary {
+			margin: 0 auto;
+		}
+	}
+
+	@include media-mobile {
+		flex-basis: auto;
+		text-align: center;
+		padding: 0rem;
 		.button__primary {
 			margin: 0 auto;
 		}
@@ -213,9 +287,9 @@ h5 {
 		padding-right: 12rem;
 	}
 
-	@include tablet-only {
+	@include media-tablet {
 		flex-direction: column;
-		width: 437px;
+		width: 43.7rem;
 
 		.about__content {
 			padding: 0rem .3rem 3rem .4rem;
@@ -224,6 +298,30 @@ h5 {
 		img {
 			order: 0;
 			padding-right: 0rem;
+		}
+	}
+
+	@include media-mobile {
+		flex-direction: column;
+		width: auto; //! À REVISER
+
+		.about__content {
+			margin-bottom: 4.2rem;
+			padding: 0rem;
+			padding: 0rem 1.5rem;
+			text-align: justify;
+
+			h3 {
+				text-align: center;
+			}
+
+		}
+
+		img {
+			order: 0;
+			padding-right: 0rem;
+			width: 100%;
+			max-width: 26rem;
 		}
 	}
 }
@@ -237,14 +335,24 @@ h5 {
 		margin: 2.5rem 0rem;
 	}
 
+	@include media-mobile {
+		p:first-of-type {
+			margin: 2.5rem 0rem 2.2rem;
+		}
+	}
 }
 
 // OUR FRIENDS SECTION
 .our__friends__section {
 	background-color: $color-light-l;
 	padding: 8rem 0rem 10rem;
+
 	.button__primary {
 		margin: 0rem auto;
+	}
+
+	@include media-mobile {
+		padding: 4.2rem 0rem;
 	}
 }
 
@@ -301,7 +409,7 @@ h5 {
 	}
 }
 
-@include tablet-only {
+@include media-tablet {
 	.slider__wrapper {
 		.btn__prev {
 			margin-right: 1.2rem;
@@ -324,10 +432,43 @@ h5 {
 	}
 }
 
+@include media-mobile {
+	.slider__wrapper {
+		margin-top: 4.2rem;
+		margin-bottom: 4.2rem;
+
+		.card__content {
+			display: none;
+			margin: 0rem 1.5rem;
+			&:first-of-type {
+				display: flex;
+				order: -1;
+			}
+		}
+
+		.button__float {
+			margin-top: 2rem;
+
+			&.btn__prev {
+				margin-right: 0rem;
+				margin-left: 5.8rem;
+			}
+			&.btn__next {
+				margin-left: 0rem;
+				margin-right: 5.8rem;
+			}
+		}
+	}
+}
+
 // HELP SECTION
 .help__section {
 	h3 {
 		margin-bottom: 6rem;
+
+		@include media-mobile {
+			margin-bottom: 4.2rem;
+		}
 	}
 
 	.help__list {
@@ -336,17 +477,40 @@ h5 {
 		justify-content: center;
 		gap: 5.5rem 12rem;
 
-		@include tablet-only {
+		h4 {
+			margin-top: 2.3rem; //? pixel perfect 3 rem figma
+		}
+
+		@include media-tablet {
 			gap: 5.5rem 6rem;
 
 			.help__list__item {
 				width: 17rem;
 			}
 		}
-	}
 
-	.help__list__item h4 {
-		margin-top: 2.3rem; //? pixel perfect 3 rem figma
+		@include media-mobile {
+			gap: 3rem 3rem;
+
+			.help__list__item {
+				width: 13rem;
+
+				h4 {
+					font-size: 1.5rem;
+					line-height: 1.7rem;
+					margin-top: 1.3rem; //? pixel perfect 2 rem figma
+				}
+
+				img {
+					width: 5rem;
+					height: 5rem;
+				}
+
+				&:last-of-type {
+					// justify-self: left; // Not working
+				}
+			}
+		}
 	}
 }
 
@@ -364,12 +528,24 @@ h5 {
 		margin-right: 3rem;
 	}
 
-	@include tablet-only {
+	@include media-tablet {
 		flex-direction: column;
 
 		img {
 			order: 0;
 			margin-right: 0rem;
+		}
+	}
+
+	@include media-mobile {
+		flex-direction: column;
+		padding: 4.2rem 2rem 41.8rem;
+
+		& > img {
+			order: 0;
+			margin-top: 4.2rem;
+			margin-right: 0rem;
+			width: 26rem;
 		}
 	}
 }
@@ -391,6 +567,11 @@ h5 {
 				background-color: $color-primary-light;
 			}
 		}
+
+		@include media-mobile {
+			font-size: 1.5rem;
+			line-height: 1.7rem;
+		}
 	}
 
 	img {
@@ -398,8 +579,24 @@ h5 {
 		margin-right: 1rem;
 	}
 
-	@include tablet-only {
+	@include media-tablet {
 		margin-bottom: 6rem;
+	}
+
+	@include media-mobile {
+		width: auto;
+
+		h3 {
+			text-align: center;
+		}
+
+		h4 {
+			margin: 0rem auto;
+		}
+
+		p {
+			text-align: justify;
+		}
 	}
 }
 
@@ -408,7 +605,7 @@ h5 {
 	background: $background-primary;
 	padding-top: 4rem;
 
-	@include tablet-only {
+	@include media-tablet {
 		padding-top: 3rem;
 	}
 
@@ -431,7 +628,7 @@ h5 {
 			}
 		}
 
-		@include tablet-only {
+		@include media-tablet {
 			gap: 6.5rem 6rem;
 
 			div {
@@ -489,7 +686,7 @@ h5 {
 	background-color: $color-light-l;
 	padding: 8rem 0rem 10rem;
 
-	@include tablet-only {
+	@include media-tablet {
 		padding: 6rem 0rem 7.6rem; //? pixel perfect 7rem figma
 
 		h3 {
@@ -500,7 +697,7 @@ h5 {
 	.slider__wrapper {
 		gap: 3rem 4rem;
 
-		@include tablet-only {
+		@include media-tablet {
 			margin-top: 3rem;
 			margin-bottom: 4rem;
 			justify-content: center;
@@ -510,7 +707,7 @@ h5 {
 	.card__content {
 		margin: 0rem;
 
-		@include tablet-only {
+		@include media-tablet {
 			&:first-of-type {
 				margin-right: 0rem;
 			}

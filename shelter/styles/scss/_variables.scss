@@ -18,19 +18,31 @@ $color-dark-s: #CDCDCD;
 
 // MEDIA QUERIES
 $breakpoints: (
-	"mobile": 480px,
+	"mobile": 767px,
 	"tablet": 768px,
 	"desktop": 1024px
 );
 
-@mixin mobile-only {
+// 320px — 480px : les mobiles
+// 481px — 768px : iPads, tablettes
+// 769px — 1024px : petits écrans, ordinateurs portables
+// 1025px — 1200px : ordinateurs de bureau, écrans larges
+// 1201px et plus —  écrans extra larges, TV
+
+@mixin media-mobile {
 	@media screen and (max-width: map-get($breakpoints, "mobile")) {
 		@content;
 	}
 }
 
-@mixin tablet-only {
-	@media screen and (max-width: map-get($breakpoints, "tablet")) {
+@mixin media-tablet {
+	@media screen and (min-width: map-get($breakpoints, "tablet")) {
+		@content;
+	}
+}
+
+@mixin media-desktop {
+	@media screen and (min-width: map-get($breakpoints, "desktop")) {
 		@content;
 	}
 }
