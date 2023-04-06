@@ -18,9 +18,9 @@ $color-dark-s: #CDCDCD;
 
 // MEDIA QUERIES
 $breakpoints: (
-	"mobile": 767px,
+	"mobile": 480px,
 	"tablet": 768px,
-	"desktop": 1024px
+	"desktop": 1025px
 );
 
 // 320px — 480px : les mobiles
@@ -35,17 +35,31 @@ $breakpoints: (
 	}
 }
 
+// @mixin media-tablet {
+// 	@media screen and (min-width: map-get($breakpoints, "tablet")) and (max-width: 1024px) {
+// 		@content;
+// 	}
+// }
+
 @mixin media-tablet {
-	@media screen and (min-width: map-get($breakpoints, "tablet")) {
+	@media screen and (min-width: 481px) and (max-width: 768px) {
 		@content;
 	}
 }
 
+// @mixin media-desktop {
+// 	@media screen and (min-width: map-get($breakpoints, "desktop")) {
+// 		@content;
+// 	}
+// }
+
 @mixin media-desktop {
-	@media screen and (min-width: map-get($breakpoints, "desktop")) {
+	@media screen and (min-width: 769px) {
 		@content;
 	}
 }
+
+
 
 // OTHERS
 $border-primary: 2px solid $color-primary;
@@ -61,7 +75,7 @@ $background-primary: url(../../assets/images/noise_transparent@2x.png), radial-g
   list-style: none;
 }
 
-@mixin horizontal-list($margin-x: 35px) {
+@mixin horizontal-list($margin-right: 0px) {
   @include reset-list;
 
   li {
@@ -69,7 +83,7 @@ $background-primary: url(../../assets/images/noise_transparent@2x.png), radial-g
     margin: {
 			top: 0px;
       left: 0px;
-      right: $margin-x;
+      right: $margin-right;
 			bottom: 0px;
     }
 		&:last-child {
@@ -99,8 +113,9 @@ $background-primary: url(../../assets/images/noise_transparent@2x.png), radial-g
 		border: $border;
 		padding: 13px 43px;
 	}
-	// margin: 0 auto;
 	width: max-content;
+	margin-left: auto;
+	margin-right: auto;
 	transition: all 0.5s;
 	@media (hover: hover) {
 		&:hover {
@@ -133,6 +148,8 @@ $background-primary: url(../../assets/images/noise_transparent@2x.png), radial-g
 	@include button($border: $border-primary);
 	width: 48px;
 	height: 48px;
+	margin-left: 0;
+	margin-right: 0;
 	padding: 0;
 	@media (hover: hover) {
 		&:hover {
