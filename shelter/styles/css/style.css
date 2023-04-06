@@ -750,8 +750,7 @@ h5 {
 }
 @media media-mobile {
   .footer .container .infos a {
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
   }
 }
 .footer .container .infos h3 {
@@ -794,53 +793,64 @@ h5 {
   }
 }
 
-.pets__page {
+.pets__page .header {
   background-color: #FFFFFF;
-  padding: 3rem 0rem;
 }
-.pets__page nav {
-  padding-top: 0rem;
+.pets__page .header nav {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
-.pets__page nav .logo__title,
-.pets__page nav .menu__item a {
+.pets__page .header nav .logo__title,
+.pets__page .header nav .menu__item a {
   color: #545454;
 }
-.pets__page nav .logo__subtitle,
-.pets__page nav .active a {
+.pets__page .header nav .logo__subtitle,
+.pets__page .header nav .active a {
   color: #292929;
+}
+.pets__page .header .burger-icon span {
+  background-color: #292929;
 }
 
 .pets__section {
   background-color: #F6F6F6;
-  padding: 8rem 0rem 10rem;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .pets__section {
-    padding: 6rem 0rem 7.6rem;
+    padding-top: 6rem;
+    padding-bottom: 7.6rem;
   }
   .pets__section h3 {
     padding-top: 2rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .pets__section {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+  }
+}
 .pets__section .slider__wrapper {
+  flex-wrap: wrap;
   gap: 3rem 4rem;
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .pets__section .slider__wrapper {
+    justify-content: center;
+    height: 136.5rem;
+    overflow: hidden;
     margin-top: 3rem;
     margin-bottom: 4rem;
-    justify-content: center;
   }
 }
-.pets__section .card__content {
-  margin: 0rem;
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .pets__section .card__content:first-of-type {
-    margin-right: 0rem;
-  }
-  .pets__section .card__content:nth-of-type(7) {
-    display: none;
+@media screen and (max-width: 480px) {
+  .pets__section .slider__wrapper {
+    height: 136.5rem;
+    overflow: hidden;
+    margin-top: 4.2rem;
+    margin-bottom: 4.2rem;
   }
 }
 .pets__section .slider__pagination {
@@ -848,6 +858,11 @@ h5 {
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .pets__section .slider__pagination {
+    column-gap: 1rem;
+  }
 }
 .pets__section .slider__pagination .inactive {
   color: #CDCDCD;

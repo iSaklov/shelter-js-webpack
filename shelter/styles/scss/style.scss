@@ -654,8 +654,7 @@ h5 {
 				column-gap: 2rem;
 
 				@media media-mobile {
-					margin-left: auto;
-					margin-right: auto;
+					justify-content: center;
 				}
 			}
 
@@ -705,11 +704,12 @@ h5 {
 }
 
 // PETS PAGE
-.pets__page {
+.pets__page .header {
 	background-color: $color-light-xl;
-	padding: 3rem 0rem;
+
 	nav {
-		padding-top: 0rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 
 		.logo__title,
 		.menu__item a {
@@ -721,40 +721,48 @@ h5 {
 			color: $color-dark-3xl;
 		}
 	}
+
+	.burger-icon span {
+		background-color: $color-dark-3xl;
+	}
 }
 
 .pets__section {
 	background-color: $color-light-l;
-	padding: 8rem 0rem 10rem;
+	padding-top: 8rem;
+	padding-bottom: 10rem;
 
 	@include media-tablet {
-		padding: 6rem 0rem 7.6rem; //? pixel perfect 7rem figma
+		padding-top: 6rem;
+		padding-bottom: 7.6rem;
 
 		h3 {
 			padding-top: 2rem;
 		}
 	}
 
+	@include media-mobile {
+		padding-top: 4.2rem;
+		padding-bottom: 4.2rem;
+	}
+
 	.slider__wrapper {
+		flex-wrap: wrap;
 		gap: 3rem 4rem;
 
 		@include media-tablet {
+			justify-content: center;
+			height: 136.5rem;
+			overflow: hidden;
 			margin-top: 3rem;
 			margin-bottom: 4rem;
-			justify-content: center;
 		}
-	}
 
-	.card__content {
-		margin: 0rem;
-
-		@include media-tablet {
-			&:first-of-type {
-				margin-right: 0rem;
-			}
-			&:nth-of-type(7) {
-				display: none; //TODO fix logic
-			}
+		@include media-mobile {
+			height: 136.5rem;
+			overflow: hidden;
+			margin-top: 4.2rem;
+			margin-bottom: 4.2rem;
 		}
 	}
 
@@ -763,6 +771,10 @@ h5 {
 		justify-content: center;
 		align-items: center;
 		column-gap: 2rem;
+
+		@include media-mobile {
+			column-gap: 1rem;
+		}
 
 		.inactive {
 			color: $color-dark-s;
@@ -779,6 +791,7 @@ h5 {
 		.active {
 			background-color: $color-primary;
 			border-color: $color-primary;
+
 			@media (hover: hover) {
 				&:hover {
 					cursor: default;
