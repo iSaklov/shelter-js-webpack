@@ -419,16 +419,16 @@ h5 {
 	align-items: center;
 	height: 43.5rem;
 	overflow: hidden;
+	width: 90%;
 
 	@include media-tablet {
 		column-gap: 4rem;
-		// margin-left: 1.2rem;
-		// margin-right: 1.2rem;
+		margin-left: auto;
+		margin-right: auto;
+		width: 82%;
 	}
 
 	@include media-mobile {
-		// column-gap: auto;
-		// row-gap: 3rem;
 		width: 100%;
 	}
 }
@@ -672,14 +672,37 @@ h5 {
 				row-gap: 4rem;
 				padding-top: 1.6rem;
 
+				@include media-mobile {
+					align-items: center;
+				}
+
 				&:last-of-type {
 					row-gap: 3.3rem;
 
 					@include media-mobile {
 						row-gap: 4rem;
+						max-width: 30rem;
 					}
 				}
 			}
+
+			@include media-mobile {
+				.address {
+					h3 {
+						padding-left: 1rem;
+						padding-right: 1rem;
+					}
+
+					h4 {
+						text-align: left;
+					}
+
+					a {
+						align-self: flex-start;
+					}
+				}
+			}
+
 
 			@include media-tablet {
 				column-gap: 6rem;

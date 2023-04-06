@@ -520,10 +520,14 @@ h5 {
   align-items: center;
   height: 43.5rem;
   overflow: hidden;
+  width: 90%;
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .cards__wrapper {
     column-gap: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 82%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -765,12 +769,30 @@ h5 {
   row-gap: 4rem;
   padding-top: 1.6rem;
 }
+@media screen and (max-width: 480px) {
+  .footer .container .infos div {
+    align-items: center;
+  }
+}
 .footer .container .infos div:last-of-type {
   row-gap: 3.3rem;
 }
 @media screen and (max-width: 480px) {
   .footer .container .infos div:last-of-type {
     row-gap: 4rem;
+    max-width: 30rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer .container .infos .address h3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .footer .container .infos .address h4 {
+    text-align: left;
+  }
+  .footer .container .infos .address a {
+    align-self: flex-start;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
