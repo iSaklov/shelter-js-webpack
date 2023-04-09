@@ -718,6 +718,7 @@ h5 {
 }
 .footer .container {
   display: flex;
+  column-gap: 16rem;
   justify-content: space-between;
   text-align: left;
 }
@@ -746,44 +747,66 @@ h5 {
 .footer .container .infos {
   display: flex;
   column-gap: 16rem;
+  justify-content: center;
 }
-.footer .container .infos a {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .footer .container .infos {
+    column-gap: 6rem;
+    padding-left: 3.4rem;
+    padding-right: 3.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer .container .infos {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+}
+.footer .container .infos .contacts, .footer .container .infos .address {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 1.6rem;
+}
+.footer .container .infos .contacts a, .footer .container .infos .address a {
   display: flex;
   align-items: center;
   column-gap: 2rem;
 }
 @media media-mobile {
-  .footer .container .infos a {
+  .footer .container .infos .contacts a, .footer .container .infos .address a {
     justify-content: center;
   }
 }
-.footer .container .infos h3 {
+.footer .container .infos .contacts h3, .footer .container .infos .address h3 {
   color: #FFFFFF;
 }
-.footer .container .infos h4 {
+.footer .container .infos .contacts h4, .footer .container .infos .address h4 {
   color: #F1CDB3;
 }
-.footer .container .infos div {
-  display: flex;
-  flex-flow: column wrap;
-  row-gap: 4rem;
-  padding-top: 1.6rem;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .footer .container .infos .contacts, .footer .container .infos .address {
+    padding-top: 0rem;
+  }
 }
 @media screen and (max-width: 480px) {
-  .footer .container .infos div {
+  .footer .container .infos .contacts, .footer .container .infos .address {
+    padding-top: 0rem;
     align-items: center;
   }
 }
-.footer .container .infos div:last-of-type {
-  row-gap: 3.3rem;
+.footer .container .infos .contacts {
+  row-gap: 4rem;
+}
+.footer .container .infos .address a:first-of-type {
+  padding-top: 3.4rem;
+  padding-bottom: 3.2rem;
 }
 @media screen and (max-width: 480px) {
-  .footer .container .infos div:last-of-type {
+  .footer .container .infos .address {
     row-gap: 4rem;
     max-width: 30rem;
   }
-}
-@media screen and (max-width: 480px) {
   .footer .container .infos .address h3 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -793,25 +816,6 @@ h5 {
   }
   .footer .container .infos .address a {
     align-self: flex-start;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .footer .container .infos {
-    column-gap: 6rem;
-    padding-left: 3.4rem;
-    padding-right: 3.4rem;
-  }
-  .footer .container .infos div {
-    padding-top: 0rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .footer .container .infos {
-    flex-direction: column;
-    row-gap: 4rem;
-  }
-  .footer .container .infos div {
-    padding-top: 0rem;
   }
 }
 

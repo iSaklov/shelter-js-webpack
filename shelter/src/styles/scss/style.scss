@@ -1,3 +1,4 @@
+@import "../css/normalize.css";
 @import "variables.scss";
 
 html {
@@ -6,7 +7,7 @@ html {
 }
 
 body {
-	// paragraph__L
+	// paragraph__L START
 	font-family: $font-family-arial;
 	font-style: normal;
   font-weight: 400;
@@ -14,7 +15,7 @@ body {
 	line-height: 2.4rem;
 	text-align: center;
 	color: $color-dark-xl;
-	//
+	// END
 }
 
 img {
@@ -619,6 +620,7 @@ h5 {
 
 	.container {
 		display: flex;
+		column-gap: 16rem;
 		justify-content: space-between;
 		text-align: left;
 
@@ -639,7 +641,7 @@ h5 {
 			align-items: center;
 			text-align: center;
 
-			& > img {
+			> img {
 				width: 26rem;
 			}
 		}
@@ -648,78 +650,79 @@ h5 {
 			display: flex;
 			column-gap: 16rem;
 
-			a {
-				display: flex;
-				align-items: center;
-				column-gap: 2rem;
-
-				@media media-mobile {
-					justify-content: center;
-				}
-			}
-
-			h3 {
-				color: $color-light-xl;
-			}
-
-			h4 {
-				color: $color-primary;
-			}
-
-			div {
-				display: flex;
-				flex-flow: column wrap;
-				row-gap: 4rem;
-				padding-top: 1.6rem;
-
-				@include media-mobile {
-					align-items: center;
-				}
-
-				&:last-of-type {
-					row-gap: 3.3rem;
-
-					@include media-mobile {
-						row-gap: 4rem;
-						max-width: 30rem;
-					}
-				}
-			}
-
-			@include media-mobile {
-				.address {
-					h3 {
-						padding-left: 1rem;
-						padding-right: 1rem;
-					}
-
-					h4 {
-						text-align: left;
-					}
-
-					a {
-						align-self: flex-start;
-					}
-				}
-			}
-
-
 			@include media-tablet {
 				column-gap: 6rem;
 				padding-left: 3.4rem;
 				padding-right: 3.4rem;
-
-				div {
-					padding-top: 0rem;
-				}
 			}
 
 			@include media-mobile {
 				flex-direction: column;
 				row-gap: 4rem;
+			}
 
-				div {
+			.contacts, .address {
+				display: flex;
+				flex-direction: column;
+				padding-top: 1.6rem;
+
+				@include media-tablet {
 					padding-top: 0rem;
+				}
+
+				@include media-mobile {
+					padding-top: 0rem;
+					align-items: center;
+				}
+
+				a {
+					display: flex;
+					align-items: center;
+					column-gap: 2rem;
+				}
+
+				h3 {
+					color: $color-light-xl;
+				}
+
+				h4 {
+					color: $color-primary;
+				}
+			}
+
+			.contacts {
+				row-gap: 4rem;
+				min-width: 28rem;
+			}
+
+			.address {
+				min-width: 30rem;
+				a:first-of-type {
+					margin-top: 3.4rem;
+					margin-bottom: 3.2rem;
+				}
+
+				@include media-mobile {
+					row-gap: 4rem;
+
+					a:first-of-type {
+						margin-top: 0rem;
+						margin-bottom: 0rem;
+					}
+
+
+					a {
+						align-self: flex-start;
+					}
+
+					h3 {
+						padding-left: 1.5rem;
+						padding-right: 1.5rem;
+					}
+
+					h4 {
+						text-align: justify;
+					}
 				}
 			}
 		}
@@ -727,99 +730,4 @@ h5 {
 }
 
 // PETS PAGE
-.pets__page .header {
-	background-color: $color-light-xl;
-
-	nav {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-
-		.logo__title,
-		.menu__item a {
-			color: $color-dark-l;
-		}
-
-		.logo__subtitle,
-		.active a {
-			color: $color-dark-3xl;
-		}
-	}
-
-	.burger-icon span {
-		background-color: $color-dark-3xl;
-	}
-}
-
-.pets__section {
-	background-color: $color-light-l;
-	padding-top: 8rem;
-	padding-bottom: 10rem;
-
-	@include media-tablet {
-		padding-top: 6rem;
-		padding-bottom: 7.6rem;
-
-		h3 {
-			padding-top: 2rem;
-		}
-	}
-
-	@include media-mobile {
-		padding-top: 4.2rem;
-		padding-bottom: 4.2rem;
-	}
-
-	.slider__wrapper {
-		flex-wrap: wrap;
-		gap: 3rem 4rem;
-
-		@include media-tablet {
-			justify-content: center;
-			height: 136.5rem;
-			overflow: hidden;
-			margin-top: 3rem;
-			margin-bottom: 4rem;
-		}
-
-		@include media-mobile {
-			height: 136.5rem;
-			overflow: hidden;
-			margin-top: 4.2rem;
-			margin-bottom: 4.2rem;
-		}
-	}
-
-	.slider__pagination {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		column-gap: 2rem;
-
-		@include media-mobile {
-			column-gap: 1rem;
-		}
-
-		.inactive {
-			color: $color-dark-s;
-			border-color: $color-dark-s;
-			h4 {
-				color: $color-dark-s;
-			}
-			@media (hover: hover) {
-				cursor: default;
-				background-color: inherit;
-			}
-		}
-
-		.active {
-			background-color: $color-primary;
-			border-color: $color-primary;
-
-			@media (hover: hover) {
-				&:hover {
-					cursor: default;
-				}
-			}
-		}
-	}
-}
+@import "pets_page.scss"
