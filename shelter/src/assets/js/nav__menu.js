@@ -9,12 +9,12 @@ navLinks.forEach((item) => item.addEventListener('click', menuToggle));
 
 document.addEventListener('click', (e) => {
 	if (navbar.classList.contains('menu__open') && !e.target.closest('.navbar')) {
-		menuToggle();
+		menuToggle(e);
 	}
 });
 
 
-function menuToggle() {
+function menuToggle(e) {
 	body.classList.toggle('ovetrflow-hidden');
 	navbar.classList.toggle('menu__open');
 }
