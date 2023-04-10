@@ -15,7 +15,7 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<!-- FAVICON END -->
-	<link rel="stylesheet" href="styles/css/style.css">
+	<!-- <link rel="stylesheet" href="styles/css/style.css"> -->
 	<!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" />
 	<link rel="stylesheet" media="screen and (min-width: 600px)" href="large.css" /> -->
 </head>
@@ -23,7 +23,7 @@
 <body class="main__page">
 	<header class="header">
 		<div class="container">
-			<nav>
+			<nav class="navbar">
 
 				<a href="javascript:void(0);">
 					<div class="logo__wrapper">
@@ -32,23 +32,18 @@
 					</div>
 				</a>
 
-				<div class="sidevan">
-					<!-- <a id="close-btn" href="#" class="close">×</a> -->
-					<ul class="list__menu">
-						<li class="menu__item active"><a href="index.html">About the shelter</a></li>
-						<li class="menu__item"><a href="pets.html">Our pets</a></li>
-						<li class="menu__item"><a href="#help">Help the shelter</a></li>
-						<li class="menu__item"><a href="#contacts">Contacts</a></li>
-					</ul>
-				</div>
+				<ul class="nav__menu">
+					<li class="nav__item active"><a href="index.html">About the shelter</a></li>
+					<li class="nav__item"><a href="pets.html">Our pets</a></li>
+					<li class="nav__item"><a href="#help">Help the shelter</a></li>
+					<li class="nav__item"><a href="#contacts">Contacts</a></li>
+				</ul>
 
-				<a href="javascript:void(0);" id="open-btn">
-					<span class="burger-icon">
-						<span></span>
-						<span></span>
-						<span></span>
-					</span>
-				</a>
+				<span class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
 
 			</nav>
 		</div>
@@ -205,7 +200,7 @@
 			<img src="assets/images/footer-puppy.png" alt="">
 		</div>
 	</footer>
-	<!-- <script src="assets/js/main.js"></script> -->
+
 </body>
 
 </html>

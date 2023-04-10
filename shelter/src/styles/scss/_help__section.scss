@@ -1,0 +1,52 @@
+// HELP SECTION
+.help__section {
+	h3 {
+		margin-bottom: 6rem;
+
+		@include media-mobile {
+			margin-bottom: 4.2rem;
+		}
+	}
+
+	.help__list {
+		@include horizontal-list(0rem);
+		flex-flow: row wrap;
+		justify-content: center;
+		gap: 5.5rem 12rem;
+
+		h4 {
+			margin-top: 2.3rem; //? pixel perfect 3 rem figma
+		}
+
+		@include media-tablet {
+			gap: 5.5rem 6rem;
+
+			.help__list__item {
+				width: 17rem;
+			}
+		}
+
+		@include media-mobile {
+			gap: 3rem 3rem;
+
+			.help__list__item {
+				width: 13rem;
+
+				h4 {
+					font-size: 1.5rem;
+					line-height: 1.7rem;
+					margin-top: 1.3rem; //? pixel perfect 2 rem figma
+				}
+
+				img {
+					width: 5rem;
+					height: 5rem;
+				}
+
+				&:last-of-type {
+					margin-right: auto;
+				}
+			}
+		}
+	}
+}

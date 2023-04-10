@@ -1,0 +1,89 @@
+// DONATION SECTION
+.donation__section {
+	background-color: $color-light-l;
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+
+
+		> img {
+			order: -1;
+			margin-right: 3rem;
+		}
+
+		@include media-tablet {
+			flex-direction: column;
+
+			img {
+				order: 0;
+				margin-right: 0rem;
+			}
+		}
+
+		@include media-mobile {
+			flex-direction: column;
+			padding: 4.2rem 2rem 4.18rem;
+
+			& > img {
+				order: 0;
+				margin-top: 4.2rem;
+				margin-right: 0rem;
+				width: 26rem;
+			}
+		}
+	}
+}
+
+.donation__content {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem 0rem;
+	width: 38rem;
+	text-align: left;
+
+	h4 {
+		background-color: $color-primary;
+		width: max-content;
+		border-radius: .9rem;
+		padding: 1rem 1.5rem;
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: $color-primary-light;
+			}
+		}
+	}
+
+	img {
+		vertical-align: text-top;
+		padding-right: 1rem;
+	}
+
+
+	@include media-tablet {
+		margin-bottom: 6rem;
+	}
+
+	@include media-mobile {
+		width: auto;
+
+		h3 {
+			text-align: center;
+		}
+
+		h4 {
+			font-size: 1.5rem;
+			line-height: 1.7rem;
+			margin: 0rem auto;
+		}
+
+		p {
+			text-align: justify;
+		}
+	}
+}

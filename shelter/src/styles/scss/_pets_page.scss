@@ -1,12 +1,13 @@
+// PETS PAGE NAVBAR
 .pets__page .header {
 	background-color: $color-light-xl;
 
-	nav {
+	.navbar {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 
 		.logo__title,
-		.menu__item a {
+		.nav__item a {
 			color: $color-dark-l;
 		}
 
@@ -16,13 +17,34 @@
 		}
 	}
 
-	.burger-icon span {
-		background-color: $color-dark-3xl;
+	@media screen and (max-width: 767px) {
+		.navbar {
+			.nav__item {
+				a {
+				color: $color-dark-s;
+				}
+			}
+
+			.active {
+				a {
+					color: $color-light-s;
+				}
+			}
+		}
+
+		.burger span {
+			background-color: $color-dark-3xl;
+		}
+
+		.menu__open {
+			.burger span {
+				background-color: $color-light-s;
+			}
+		}
 	}
 }
 
-
-
+// PETS PAGE SECTION
 .pets__section {
 	background-color: $color-light-l;
 	padding-top: 8rem;

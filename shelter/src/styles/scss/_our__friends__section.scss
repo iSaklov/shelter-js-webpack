@@ -1,0 +1,99 @@
+// OUR FRIENDS SECTION
+.our__friends__section {
+	background-color: $color-light-l;
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+
+	@include media-mobile {
+		padding-top: 4.2rem;
+		padding-bottom: 4.2rem;
+	}
+}
+
+.slider__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+
+	@include media-mobile {
+		flex-wrap: wrap;
+		width: 27rem; // For align nav buttons
+		margin-top: 4.2rem;
+		margin-bottom: 4.2rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		.button__float {
+			margin-top: 2rem;
+		}
+	}
+
+	.btn__prev {
+		@include media-mobile {
+			margin-left: 4.3rem;
+			order: 1;
+		}
+	}
+
+	.btn__next {
+		transform: rotate(180deg);
+
+		@include media-mobile {
+			margin-right: 4.3rem;
+			order: 1;
+		}
+	}
+}
+
+.cards__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 9rem;
+	justify-content: center;
+	align-items: center;
+	height: 43.5rem;
+	overflow: hidden;
+	width: 90%;
+
+	@include media-tablet {
+		column-gap: 4rem;
+		margin-left: auto;
+		margin-right: auto;
+		width: 82%;
+	}
+
+	@include media-mobile {
+		width: 100%;
+	}
+}
+
+.card__content {
+	width: 27rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color-light-s;
+	padding-bottom: 3rem;
+	border-radius: .9rem;
+
+	img {
+		border-radius: .9rem .9rem 0rem 0rem;
+	}
+	h4 {
+		margin: 3rem auto;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: $color-light-xl;
+			box-shadow: 0rem .2rem 3.5rem 1.4rem rgba(13, 13, 13, .04);
+			.button__secondary {
+				background-color: $color-primary-light;
+				border-color: $color-primary-light;
+			}
+		}
+	}
+}
