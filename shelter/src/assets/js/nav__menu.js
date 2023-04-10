@@ -1,20 +1,11 @@
 const body = document.querySelector('body');
 const navbar = document.querySelector('.navbar');
-const burgerBtn = document.querySelector('.burger');
-const navLinks = document.querySelectorAll('.nav__item');
-
-burgerBtn.addEventListener('click', menuToggle);
-
-navLinks.forEach((item) => item.addEventListener('click', menuToggle));
 
 document.addEventListener('click', (e) => {
-	if (navbar.classList.contains('menu__open') && !e.target.closest('.navbar')) {
-		menuToggle(e);
+	if (e.target.closest('.nav__item')
+			|| e.target.closest('.burger')
+			|| (navbar.classList.contains('menu__open') && !e.target.classList.contains('nav__menu'))) {
+		body.classList.toggle('ovetrflow-hidden');
+		navbar.classList.toggle('menu__open');
 	}
 });
-
-
-function menuToggle(e) {
-	body.classList.toggle('ovetrflow-hidden');
-	navbar.classList.toggle('menu__open');
-}

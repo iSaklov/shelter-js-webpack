@@ -18,7 +18,7 @@ module.exports = {
 	},
 	entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'shelter/shelter'),
 		clean: true,
 		filename: '[name].[contenthash].js',
 		assetModuleFilename: 'assets/[name].[contenthash][ext]'
