@@ -7,9 +7,8 @@
     "start": "webpack serve",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
-    "clear": "rd /s /q dist",
-		"predeploy": "npm run build-prod",
-		"deploy": "gh-pages -d shelter"
+    "clear": "rm -R dist",
+		"deploy-git": "gh-pages -d shelter"
   },
   "repository": {
     "type": "git",

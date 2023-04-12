@@ -47,15 +47,9 @@
 	}
 }
 
-.cards__wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 9rem;
-	justify-content: center;
-	align-items: center;
-	height: 43.5rem;
+.inside__slider__wrapper {
+	width: 99rem;
 	overflow: hidden;
-	width: 90%;
 
 	@include media-tablet {
 		column-gap: 4rem;
@@ -67,6 +61,17 @@
 	@include media-mobile {
 		width: 100%;
 	}
+}
+
+.items__wrapper {
+	display: flex;
+	position: relative;
+	left: -99rem;
+}
+
+.item {
+	display: flex;
+	column-gap: 9rem;
 }
 
 .card__content {
@@ -96,4 +101,25 @@
 			}
 		}
 	}
+}
+
+// ANIMATION
+@keyframes move__right {
+  from {left: -99rem;}
+  to {left: -198rem;}
+}
+
+.transition__right {
+  animation-name: move__right;
+  animation-duration: 0.5s;
+}
+
+@keyframes move__left {
+  from {left: -99rem;}
+  to {left: 0rem;}
+}
+
+.transition__left {
+  animation-name: move__left;
+  animation-duration: 0.5s;
 }

@@ -18,11 +18,14 @@ module.exports = {
 	},
 	entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
 	output: {
+		filename: '[name].[contenthash].js',
 		path: path.resolve(__dirname, 'shelter/shelter'),
 		clean: true,
-		filename: '[name].[contenthash].js',
-		assetModuleFilename: 'assets/[name].[contenthash][ext]'
+		assetModuleFilename: 'assets/[name][ext]'
 	},
+	optimization: {
+    runtimeChunk: 'single',
+  },
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
@@ -57,6 +60,10 @@ module.exports = {
 					},
 					'sass-loader'
 				]
+			},
+			{
+				test: /\.(?:ico|gif|svg|png|jpg|jpeg)$/i,
+				type: 'asset/resource'
 			},
 			{
       test: /\.(?:js|mjs|cjs)$/,
