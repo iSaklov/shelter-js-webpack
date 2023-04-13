@@ -4,6 +4,11 @@
 	padding-top: 8rem;
 	padding-bottom: 10rem;
 
+	@include media-mobile {
+		padding-top: 0rem;
+		padding-bottom: 0rem;
+	}
+
 	.container {
 		display: flex;
 		flex-flow: row wrap;

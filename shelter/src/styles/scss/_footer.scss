@@ -13,7 +13,7 @@
 
 	.container {
 		display: flex;
-		// flex-wrap: wrap; //TODO pixex responsive
+		flex-wrap: wrap; //TODO pixex responsive
 		column-gap: 16rem;
 		row-gap: 6rem;
 		justify-content: space-between;
@@ -44,7 +44,10 @@
 
 		.infos {
 			display: flex;
+			flex-wrap: wrap;
 			column-gap: 16rem;
+
+			max-width: 74rem; //TODO pixex responsive
 
 			@include media-tablet {
 				column-gap: 6rem;
@@ -89,11 +92,11 @@
 
 			.contacts {
 				row-gap: 4rem;
-				min-width: 28rem;
+				max-width: 28rem;
 			}
 
 			.address {
-				min-width: 30rem;
+				max-width: 30rem;
 				a:first-of-type {
 					margin-top: 3.4rem;
 					margin-bottom: 3.2rem;

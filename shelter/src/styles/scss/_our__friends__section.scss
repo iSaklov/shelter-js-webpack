@@ -52,14 +52,11 @@
 	overflow: hidden;
 
 	@include media-tablet {
-		column-gap: 4rem;
-		margin-left: auto;
-		margin-right: auto;
-		width: 82%;
+		width: 58rem;
 	}
 
 	@include media-mobile {
-		width: 100%;
+		width: 27rem;
 	}
 }
 
@@ -67,14 +64,26 @@
 	display: flex;
 	position: relative;
 	left: -99rem;
+
+	@include media-tablet {
+		left: -58rem;
+	}
+
+	@include media-mobile {
+		left: -27rem;
+	}
 }
 
 .item {
 	display: flex;
 	column-gap: 9rem;
+
+	@include media-tablet {
+		column-gap: 4rem;
+	}
 }
 
-.card__content {
+.card {
 	width: 27rem;
 	display: flex;
 	flex-direction: column;
@@ -112,6 +121,7 @@
 .transition__right {
   animation-name: move__right;
   animation-duration: 0.5s;
+	animation-fill-mode: forwards;
 }
 
 @keyframes move__left {
@@ -122,4 +132,5 @@
 .transition__left {
   animation-name: move__left;
   animation-duration: 0.5s;
+	animation-fill-mode: forwards;
 }
