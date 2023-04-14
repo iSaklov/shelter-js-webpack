@@ -1,6 +1,7 @@
 import pets from "../../data/petsDB.json"
 import createCardTemplate from "./helpers/createCardTemplate";
 import getRandomInt from "./helpers/getRandomInt";
+import { openModal } from "./modal";
 
 if (document.querySelector("#carousel")) {
 
@@ -81,14 +82,13 @@ if (document.querySelector("#carousel")) {
 
 		if (window.matchMedia("(max-width: 480px)").matches) {
 			cardsNumber = 1;
-			initItems(cardsNumber)
 		} else if (window.matchMedia("(min-width: 481px) and (max-width: 768px").matches) {
 			cardsNumber = 2;
-			initItems(cardsNumber)
 		} else {
 			cardsNumber = 3;
-			initItems(cardsNumber)
 		}
+
+		initItems(cardsNumber)
 	})
 
 	// window.addEventListener("resize", () => {
@@ -108,7 +108,7 @@ if (document.querySelector("#carousel")) {
 			changedItem = ITEM_RIGHT;
 		}
 
-		generateChangedIds();
+		generateChangedIds()
 
 		changedItem.innerHTML = "";
 		nextCardsIds.forEach((id) => {

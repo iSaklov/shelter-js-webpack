@@ -1,4 +1,5 @@
 import getImg from "./getImg";
+import { openModal } from "../modal";
 
 export default function createCardTemplate(pet) {
 	const card = document.createElement("div");
@@ -19,6 +20,8 @@ export default function createCardTemplate(pet) {
 	card.appendChild(img);
 	card.appendChild(name);
 	card.appendChild(button);
+
+	card.addEventListener("click", openModal.bind(null, pet.id - 1));
 
   return card;
 }
